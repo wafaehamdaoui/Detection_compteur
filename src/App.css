@@ -1,8 +1,15 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  /*max-width: 1280px;*/
+  
+  border-radius: 6px;
   text-align: center;
+  background-image: url("./assets/img/sahab_background_login.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /**/background-attachment: fixed;
+  background-position: auto;
+
 }
 
 .logo {
@@ -40,3 +47,511 @@
 .read-the-docs {
   color: #888;
 }
+
+
+/*
+*
+* ==========================================
+* FOR Login page 
+* ==========================================
+*
+*/
+
+
+/*concerning the body of s'identifier page */
+.body-loginA{
+    margin-bottom: 45px;
+  font-family: "Poppins", sans-serif !important;
+  padding-bottom: 140px;
+  padding-top: 75px;
+  
+  background-size: cover;
+  border-radius: 8px;
+  /*background-image: linear-gradient(to right, #4A6053, white);*/
+  background-position: center;
+  background-repeat: no-repeat;
+  /**/background-attachment: fixed;
+  background-position: auto;
+
+}
+
+
+
+/*pour les labels */
+.labelA {
+  color: #fff;
+  font-weight: bolder;
+  margin-right: 25px;
+}
+
+
+/*pour les input */
+.input-identifierA {
+  height: 35px;
+  width: 260px;
+  padding-left: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  color: #4A6053;
+}
+
+
+
+/*pour la division qui contient le boutton connection */
+.div-button-connexion-loginA{
+  
+  margin-top: 10px;
+  padding-left: 45px;
+  
+  margin-left: 45px;
+  
+}
+
+
+.div-loginA{
+  margin-left:160px;
+  margin-right:160px;
+  margin-bottom: 65px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  color: #0000;
+  backdrop-filter: blur(7px);
+  background-color: rgba(0, 0, 0, 0.45);
+  border-radius: 6px;
+  box-shadow: 0 1px 20px #285b8f, 0 0 0 13px #ffffffeb;
+  
+  margin-top: 55px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  /* styles for small screens go here */
+  #line{
+    display: none;
+    margin-right: 5px;
+    margin-left: 5px;
+    transform: rotate(90deg) ;
+    height: 0px;
+  }
+
+
+  .div-loginA{
+    flex-direction: column;
+    margin-left:80px;
+    margin-right:80px;
+  }
+  .vertical-line-loginA{
+    display: none !important;
+    /*visibility: unset;*/
+    /*height: 0px;*/
+    transform: rotate(90deg) ;
+    /*margin-right: 5px;
+    margin-left: 5px;*/
+    
+  }
+
+  
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+  /* styles for medium screens go here */
+  #line{
+    display:none ;
+    margin-right: 5px;
+    margin-left: 5px;
+    transform: rotate(90deg) ;
+  }
+
+
+  .div-loginA{
+    flex-direction: column;
+    margin-left:100px;
+    margin-right:100px;
+  
+  }
+
+
+  .vertical-line-loginA{
+    display:  none !important;
+    /*visibility: unset;*/
+    /*height: 0px;*/
+    transform: rotate(90deg) ;
+    /*margin-right: 5px;
+    margin-left: 5px;*/
+  }
+  
+}
+
+@media (min-width: 1001px) {
+  /* styles for large screens go here */
+ .vertical-line-loginA{
+    display: block;
+  }
+
+}
+
+.div-login-inputs{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+/*pour la ligne vertical */
+.vertical-line-loginA {
+border-left: 2px solid #fff;
+/**/display:inline ;
+height: 460px;
+margin-right: 55px;
+margin-left: 55px;
+
+}
+
+
+/*concerning logo for login pages*/
+.img-logo-loginA {
+height: 100px;
+width: 250px;
+
+box-shadow: 0 1px 10px #285b8f, 0 0 0 3px #ffffffeb;
+border-radius: 6px;
+
+margin-right: 45px;
+margin-top: 45px;
+float: center;
+justify-content: center;
+}
+
+
+/*pour la division qui contient le input */
+.petit-formA {
+  display: grid;
+  grid-auto-flow: column;
+  padding: 15px;
+  padding-top: 20px;
+}
+
+
+.big-title-sidentifier-loginA{
+  margin-top: 10px;
+  padding-left: 30px; 
+  margin-bottom: 20px;
+  font-size: 4rem;
+  font-weight: bolder;
+  text-decoration: underline;
+  color: #fff;
+}
+
+/*.chaque-petit-div-login-emailA {
+margin-left: 0px;
+width: auto;
+
+}*/
+
+
+.chaque-petit-div-loginA {
+
+width: auto;
+
+}
+
+
+
+
+/*pour la division qui contient le boutton connection */
+.div-button-connexion-loginA{
+  
+  margin-top: 20px;
+  padding-left: 45px;
+  
+  margin-left: 45px;
+  
+}
+
+
+/*pour la division qui contient le boutton SignUp */
+.div-button-signup-loginA{
+  
+  margin-top: 10px;
+  padding-left: 45px;
+  
+  margin-left: 45px;
+  
+}
+
+.button-SignUp-loginA{
+  
+  font-size: larger;
+  height: 40px;
+  width: 230px;
+  background-color: #0c663c; 
+  color: #fff; 
+  border: 2px solid #fff;
+  border-radius: 6px;
+  
+}
+
+.button-SignUp-loginA:hover{
+  background-color: #4a9b75;
+}
+
+
+
+.button-Connecion-loginA{
+  
+  font-size: larger;
+  height: 40px;
+  width: 230px;
+  background-color: #285b8f; 
+  color: #fff; 
+  border: 2px solid #fff;
+  border-radius: 6px;
+  
+}
+
+.button-Connecion-loginA:hover{
+  background-color: #191f29;
+}
+
+
+.chaque-petit-div-login-emailA {
+  margin-left: 34px;
+  margin-bottom: 8px;
+  width: auto;
+ 
+}
+
+
+
+
+/*
+*
+* ==========================================
+* FOR Dashboar page 
+* ==========================================
+*
+*/
+  .grande-div-Dashboard{
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    margin-bottom: 35px;
+    align-content: center;
+  }
+
+  .premiere-petite-div-Dashboard{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    
+  }
+  .card-div-Dashboard{
+    margin: auto;
+    font-family: 'Poppins', sans-serif !important;
+    
+  }
+  
+
+  .deuxieme-petite-div-Dashboard{
+
+   /* */margin-left:100px;
+  margin-right:100px;
+  margin-bottom: 35px;
+  margin-top: 35px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  color: #0000;
+  backdrop-filter: blur(7px);
+  background-color: rgba(0, 0, 0, 0.45);
+  border-radius: 6px;
+  box-shadow: 0 1px 20px #285b8f, 0 0 0 13px #ffffffeb;
+  
+  
+  padding-top: 25px;
+  padding-bottom: 25px;
+  justify-content: center;
+  }
+
+
+  .div-dessous-dashboard{
+    margin:auto;
+  }
+
+
+
+
+
+
+
+
+/*
+*
+* ==========================================
+* FOR Liste Photos page 
+* ==========================================
+*
+*/
+
+.grande-div-listePhotos{
+
+  /* */margin-left:100px;
+ margin-right:100px;
+ margin-bottom: 35px;
+ margin-top: 80px;
+ text-align: center;
+ display: flex;
+ flex-direction: row;
+ color: #0000;
+ backdrop-filter: blur(7px);
+ background-color: rgba(0, 0, 0, 0.45);
+ border-radius: 6px;
+ box-shadow: 0 1px 20px #285b8f, 0 0 0 13px #ffffffeb;
+ 
+ 
+ padding-top: 25px;
+ padding-bottom: 25px;
+ justify-content: center;
+ }
+
+
+
+
+
+
+
+
+
+
+/*
+*
+* ==========================================
+* FOR Liste Rapport page 
+* ==========================================
+*
+*/
+
+.grande-div-listeRapport{
+
+  /* */margin-left:100px;
+ margin-right:100px;
+ margin-bottom: 35px;
+ margin-top: 80px;
+ text-align: center;
+ display: flex;
+ flex-direction: row;
+ color: #0000;
+ backdrop-filter: blur(7px);
+ background-color: rgba(0, 0, 0, 0.45);
+ border-radius: 6px;
+ box-shadow: 0 1px 20px #285b8f, 0 0 0 13px #ffffffeb;
+ 
+ 
+ /*padding-top: 25px;
+ padding-bottom: 25px;*/
+ justify-content: center;
+ }
+
+
+
+
+
+
+
+/*
+*
+* ==========================================
+* FOR Ajouter Rapport page 
+* ==========================================
+*
+*/
+.grande-div-ajouterRapport{
+  /* */margin-left:100px;
+ margin-right:100px;
+ margin-bottom: 35px;
+ margin-top: 80px;
+ text-align: center;
+ display: flex;
+ flex-direction: row;
+ color: #0000;
+ backdrop-filter: blur(7px);
+ background-color: rgba(0, 0, 0, 0.45);
+ border-radius: 6px;
+ box-shadow: 0 1px 20px #285b8f, 0 0 0 13px #ffffffeb;
+ color: #fff;
+ 
+ /*padding-top: 25px;
+ padding-bottom: 25px;*/
+ justify-content: center;
+}
+
+
+
+
+
+
+/*
+*
+* ==========================================
+* FOR Scanner Compoteur page 
+* ==========================================
+*
+*/
+
+.grande-div-scanner{
+  /* */margin-left:100px;
+ margin-right:100px;
+ margin-bottom: 35px;
+ margin-top: 80px;
+ text-align: center;
+ display: flex;
+ flex-direction: row;
+ color: #0000;
+ backdrop-filter: blur(7px);
+ background-color: rgba(0, 0, 0, 0.45);
+ border-radius: 6px;
+ box-shadow: 0 1px 20px #285b8f, 0 0 0 13px #ffffffeb;
+ color: #fff;
+ 
+ /*padding-top: 25px;
+ padding-bottom: 25px;*/
+ justify-content: center;
+}
+
+
+
+/*
+*
+* ==========================================
+* FOR Listes Comptes page 
+* ==========================================
+*
+*/
+
+
+
+.grande-div-listeComptes{
+
+  /* */margin-left:100px;
+ margin-right:100px;
+ margin-bottom: 35px;
+ margin-top: 80px;
+ text-align: center;
+ display: flex;
+ flex-direction: row;
+ color: #0000;
+ backdrop-filter: blur(7px);
+ background-color: rgba(0, 0, 0, 0.45);
+ border-radius: 6px;
+ box-shadow: 0 1px 20px #285b8f, 0 0 0 13px #ffffffeb;
+ 
+ 
+ /*padding-top: 25px;
+ padding-bottom: 25px;*/
+ justify-content: center;
+ }
+
