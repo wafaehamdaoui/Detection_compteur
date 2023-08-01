@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -16,9 +17,16 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import HomeIcon from '@mui/icons-material/Home';
+import BallotIcon from '@mui/icons-material/Ballot';
+import AddIcon from '@mui/icons-material/Add';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import QrCodeScannerIcon from '@mui/icons-material/QrCodeScanner';
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+import RecentActorsIcon from '@mui/icons-material/RecentActors';
+import LogoutIcon from '@mui/icons-material/Logout';
 import { Outlet } from 'react-router-dom';
+import Logo from '../assets/img/sahab_logo.png'
 
 const drawerWidth = 240;
 
@@ -94,7 +102,17 @@ export default function PersistentDrawerLeft() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Persistent drawer
+          <Link to={"/admin"} style={{textDecoration: "none"}}>
+          <Box
+            component="img"
+            sx={{
+            mt:1,
+            height: 64,
+            }}
+            alt="sahab logo."
+            src={Logo}
+           />
+           </Link>
           </Typography>
         </Toolbar>
       </AppBar>
@@ -118,28 +136,76 @@ export default function PersistentDrawerLeft() {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          {['Accueil'].map((text) => (
+            <Link to={"/admin"} style={{textDecoration: "none"}}>
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  <HomeIcon /> 
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
             </ListItem>
+            </Link>
           ))}
         </List>
         <Divider />
         <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
+          {['Liste Photos', 'Liste Rapports'].map((text, index) => (
+            <Link to={index % 2 === 0 ? '/admin/ListePhotos' : '/admin/ListeRapports'} style={{textDecoration: "none"}}>
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {index % 2 === 0 ? <BallotIcon /> : <FormatListBulletedIcon />}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
             </ListItem>
+            </Link>
+          ))}
+        </List>
+        <Divider />
+        <List>
+          {['Scanner Compteur', 'Ajouter Rapport'].map((text, index) => (
+            <Link to={index % 2 === 0 ? '/admin/Scanner' : '/admin/Rapport'} style={{textDecoration: "none"}}>
+            <ListItem key={text} disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <QrCodeScannerIcon /> : <AddIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+            </Link>
+          ))}
+        </List>
+        <List>
+          {['Creer Comptes'].map((text) => (
+            <Link to={"/admin/Compte/"} style={{textDecoration: "none"}}>
+            <ListItem key={text} disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <PersonAddIcon /> 
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+            </Link>
+          ))}
+        </List>
+        <Divider />
+        <List>
+          {['Liste Comptes', 'Deconnecter'].map((text, index) => (
+            <Link to={index % 2 === 0 ? '/admin/ListeComptes' : '/Logout'} style={{textDecoration: "none"}}>
+            <ListItem key={text} disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <RecentActorsIcon /> : <LogoutIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+            </Link>
           ))}
         </List>
       </Drawer>
